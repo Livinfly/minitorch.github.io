@@ -1941,7 +1941,7 @@ vector1 + tensor([1])</div>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>Intuitively, we would like to interpret this expression as the standard
 vector+scalar:
-adding 10 to each position.
+adding 1 to each position.
 However, the above operation will fail because of shape mistach: we are
 adding a tensor of shape(1,) to <code>vector1</code> which has shape (3,).</p>
 </div>
@@ -2006,8 +2006,8 @@ annoying and, more importantly, inefficient::</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p><code>Broadcasting</code> is a protocol that allows us to automatically interpret the
-frist expression as implying
-the second one. Inside <code>zip</code>, we pretend that 10 is a vector of
+first expression as implying
+the second one. Inside <code>zip</code>, we pretend that 1 is a vector of
 shape (3,) when zipping it with a vector of shape (3,).
 Again, this is just an interpretation: we never actually create this vector.</p>
 </div>
